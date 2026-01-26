@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muelles y Amortiguadores El Resortero</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Muelles y Amortiguadores El Resortero</h1>
+  <p>Suspensión y repuestos de confianza</p>
+
+  <a class="btn-whatsapp"
+     href="https://wa.me/573148719333?text=Hola%20quiero%20información%20sobre%20repuestos"
+     target="_blank">
+     Consultar por WhatsApp
+  </a>
+</header>
+
+<nav class="nav">
+  <a href="#productos">Productos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="productos" class="section">
+  <h2>Productos</h2>
+<input
+  type="text"
+  id="buscador"
+  placeholder="🔍 Buscar repuestos..."
+  onkeyup="buscarProducto()"
+  class="buscador">
+<div class="categorias">
+  <button onclick="filtrarCategoria('todos')">Todos</button>
+  <button onclick="filtrarCategoria('amortiguadores')">Amortiguadores</button>
+  <button onclick="filtrarCategoria('resortes')">Resortes</button>
+  <button onclick="filtrarCategoria('bujes')">Bujes</button>
+  <button onclick="filtrarCategoria('grapas')">Grapas</button>
+</div>
+
+<p id="sinResultados" style="display:none; text-align:center; margin-top:20px;">
+  ❌ No se encontraron productos
+</p>
+  <div class="productos">
+
+    <div class="card amortuguadores">
+      <img src="img/amortiguador.png" alt="Amortiguadores">
+      <h3>Amortiguadores</h3>
+      <p>Para autos y camionetas</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card hojas de resortes">
+      <img src="img/hojas de resorte t pesado y liviano.jpeg" alt="Resortes">
+      <h3>Resortes</h3>
+      <p>Alta resistencia</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card bujes">
+      <img src="img/buje bastidor.jpeg" alt="Bujes">
+      <h3>Bujes</h3>
+      <p>Suspensión y chasis</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="crad grapas">
+      <img src="img/grapas.jpg" alt="Grapas">
+      <h3>Grapas</h3>
+      <p>Reforzadas</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card pasadores">
+      <img src="img/pasadores.jpg" alt="Pasadores">
+      <h3>Pasadores</h3>
+      <p>Alta resistencia</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card zapas">
+      <img src="img/zapas.jpg" alt="Zapas">
+      <h3>Zapas</h3>
+      <p>Para ballestas</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card tornilleria">
+      <img src="img/tornilleria.jpg" alt="Tornillería">
+      <h3>Tornillería</h3>
+      <p>Automotriz</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+    <div class="card bulones">
+      <img src="img/bulones.jpg" alt="Bulones">
+      <h3>Bulones</h3>
+      <p>Suspensión pesada</p>
+      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="nosotros" class="section dark">
+  <h2>Sobre Nosotros</h2>
+  <p>
+    Somos una empresa familiar con más de 15 años de experiencia en el sector automotriz.
+    Nos especializamos en repuestos de suspensión de alta calidad, brindando una atención
+    honesta, personalizada y cercana. Escuchamos cada caso y acompañamos a nuestros clientes
+    para ofrecer soluciones reales, porque sabemos que cada vehículo es diferente.
+  </p>
+</section>
+
+<section id="contacto" class="section">
+  <h2>Contacto</h2>
+  <p>📍 Dirección: Calle 31N # Av 2B-42 Terminal</p>
+  <p>
+    📍 Ubicación:
+    <a href="https://www.google.com/maps" target="_blank">Ver en Google Maps</a>
+  </p>
+  <p>📞 Teléfono: 314 871 9333</p>
+  <p>🕒 Horario: Lunes a Sábado 7:30am - 5:00pm</p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Muelles y Amortiguadores El Resortero</p>
+</footer>
+
+<a href="https://wa.me/573148719333"
+   class="whatsapp-float"
+   target="_blank">💬</a>
+<script>
+function buscarProducto() {
+  const input = document.getElementById("buscador").value.toLowerCase();
+  const tarjetas = document.querySelectorAll(".card");
+  const mensaje = document.getElementById("sinResultados");
+
+  let encontrados = 0;
+
+<div class="categorias">
+  <button onclick="filtrarCategoria('todos')">Todos</button>
+  <button onclick="filtrarCategoria('amortiguadores')">Amortiguadores</button>
+  <button onclick="filtrarCategoria('resortes')">Resortes</button>
+  <button onclick="filtrarCategoria('bujes')">Bujes</button>
+  <button onclick="filtrarCategoria('grapas')">Grapas</button>
+</div>
+  tarjetas.forEach(card => {
+    const texto = card.innerText.toLowerCase();
+    if (texto.includes(input)) {
+      card.style.display = "block";
+      encontrados++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  mensaje.style.display = encontrados === 0 ? "block" : "none";
+}
+<script>
+function buscarProducto() {
+  const input = document.getElementById("buscador").value.toLowerCase();
+  const tarjetas = document.querySelectorAll(".card");
+  const mensaje = document.getElementById("sinResultados");
+
+  let encontrados = 0;
+
+  tarjetas.forEach(card => {
+    const texto = card.textContent.toLowerCase();
+
+    if (texto.includes(input)) {
+      card.style.display = "block";
+      encontrados++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  if (mensaje) {
+    mensaje.style.display = encontrados === 0 ? "block" : "none";
+  }
+}
+</script>
+</body>
+</html>

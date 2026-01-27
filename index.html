@@ -11,10 +11,10 @@
 
 <header class="header">
   <h1>Muelles y Amortiguadores El Resortero</h1>
-  <p>Suspensión y repuestos de confianza</p>
+  <p>Suspensión, repuestos y reparación especializada</p>
 
   <a class="btn-whatsapp"
-     href="https://wa.me/573148719333?text=Hola%20quiero%20información%20sobre%20repuestos"
+     href="https://wa.me/573148719333?text=Hola%20quiero%20información"
      target="_blank">
      Consultar por WhatsApp
   </a>
@@ -27,131 +27,142 @@
 </nav>
 
 <section id="productos" class="section">
-  <h2>Productos</h2>
-<input
-  type="text"
-  id="buscador"
-  placeholder="🔍 Buscar repuestos..."
-  onkeyup="buscarProducto()"
-  class="buscador">
-<div class="categorias">
-  <button onclick="filtrarCategoria('todos')">Todos</button>
-  <button onclick="filtrarCategoria('amortiguadores')">Amortiguadores</button>
-  <button onclick="filtrarCategoria('resortes')">Resortes</button>
-  <button onclick="filtrarCategoria('bujes')">Bujes</button>
-  <button onclick="filtrarCategoria('grapas')">Grapas</button>
-</div>
+  <h2>Productos y Servicios</h2>
 
-<p id="sinResultados" style="display:none; text-align:center; margin-top:20px;">
-  ❌ No se encontraron productos
-</p>
+  <input
+    type="text"
+    id="buscador"
+    class="buscador"
+    placeholder="🔍 Buscar repuestos o servicios..."
+    onkeyup="buscarProducto()"
+  >
+
+  <div class="categorias">
+    <button class="activo" onclick="filtrar('', this)">Todos</button>
+    <button onclick="filtrar('suspension', this)">Suspensión</button>
+    <button onclick="filtrar('partes', this)">Partes</button>
+    <button onclick="filtrar('servicio', this)">Servicios</button>
+  </div>
+
+  <p id="sinResultados" class="sin-resultados">
+    No se encontraron resultados 😕
+  </p>
+
   <div class="productos">
 
-    <div class="card amortuguadores">
-      <img src="img/amortiguador.png" alt="Amortiguadores">
+    <div class="card" data-cat="suspension">
       <h3>Amortiguadores</h3>
-      <p>Para autos y camionetas</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+      <p>Autos y camionetas</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Amortiguadores">
+        Consultar
+      </a>
     </div>
 
-    <div class="card hojas de resortes">
-      <img src="img/hojas de resorte t pesado y liviano.jpeg" alt="Resortes">
-      <h3>Resortes</h3>
-      <p>Alta resistencia</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    <div class="card" data-cat="suspension">
+      <h3>Muelles / Resortes</h3>
+      <p>Reforzados y estándar</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Muelles">
+        Consultar
+      </a>
     </div>
 
-    <div class="card bujes">
-      <img src="img/buje bastidor.jpeg" alt="Bujes">
+    <div class="card" data-cat="suspension">
+      <h3>Hojas de Resorte</h3>
+      <p>Liviano y pesado</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Hojas%20de%20Resorte">
+        Consultar
+      </a>
+    </div>
+
+    <div class="card" data-cat="partes">
       <h3>Bujes</h3>
       <p>Suspensión y chasis</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Bujes">
+        Consultar
+      </a>
     </div>
 
-    <div class="crad grapas">
-      <img src="img/grapas.jpg" alt="Grapas">
-      <h3>Grapas</h3>
-      <p>Reforzadas</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
-    </div>
-
-    <div class="card pasadores">
-      <img src="img/pasadores.jpg" alt="Pasadores">
-      <h3>Pasadores</h3>
+    <div class="card" data-cat="partes">
+      <h3>Grapas, Pasadores y Bulones</h3>
       <p>Alta resistencia</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Grapas%20y%20Pasadores">
+        Consultar
+      </a>
     </div>
 
-    <div class="card zapas">
-      <img src="img/zapas.jpg" alt="Zapas">
-      <h3>Zapas</h3>
-      <p>Para ballestas</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    <div class="card" data-cat="partes">
+      <h3>Tornillería y Zapas</h3>
+      <p>Repuestos varios</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Tornillería">
+        Consultar
+      </a>
     </div>
 
-    <div class="card tornilleria">
-      <img src="img/tornilleria.jpg" alt="Tornillería">
-      <h3>Tornillería</h3>
-      <p>Automotriz</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    <div class="card" data-cat="partes">
+      <h3>Cámaras de Aire</h3>
+      <p>Camiones y trailers</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Estoy%20interesado%20en%20Cámaras%20de%20aire">
+        Consultar
+      </a>
     </div>
 
-    <div class="card bulones">
-      <img src="img/bulones.jpg" alt="Bulones">
-      <h3>Bulones</h3>
-      <p>Suspensión pesada</p>
-      <a href="https://wa.me/573148719333" class="btn-small">Consultar</a>
+    <div class="card servicio" data-cat="servicio">
+      <h3>Mano de Obra</h3>
+      <p>Bajada de muelles y reparación</p>
+      <a class="btn-small" target="_blank"
+         href="https://wa.me/573148719333?text=Quiero%20cotizar%20mano%20de%20obra">
+        Consultar
+      </a>
     </div>
 
   </div>
 </section>
 
 <section id="nosotros" class="section dark">
-  <h2>Sobre Nosotros</h2>
+  <h2>Nosotros</h2>
   <p>
-    Somos una empresa familiar con más de 15 años de experiencia en el sector automotriz.
-    Nos especializamos en repuestos de suspensión de alta calidad, brindando una atención
-    honesta, personalizada y cercana. Escuchamos cada caso y acompañamos a nuestros clientes
-    para ofrecer soluciones reales, porque sabemos que cada vehículo es diferente.
+    Somos una empresa familiar con más de 15 años de experiencia en el sector automotriz. Nos especializamos en repuestos de suspensión de alta calidad, brindando una atención honesta, personalizada y cercana. Escuchamos cada caso y acompañamos a nuestros clientes para ofrecer soluciones reales, porque sabemos que cada vehículo es diferente.
   </p>
 </section>
 
 <section id="contacto" class="section">
   <h2>Contacto</h2>
-  <p>📍 Dirección: Calle 31N # Av 2B-42 Terminal</p>
+  <p>📍 Address: Calle 31N # Av 2B-42 Terminal</p>
   <p>
-    📍 Ubicación:
-    <a href="https://www.google.com/maps" target="_blank">Ver en Google Maps</a>
+    📍 Location:
+    <a href="https://maps.app.goo.gl/aCrYTAC5SVk2mwYz7" target="_blank">
+      View on Google Maps
+    </a>
   </p>
-  <p>📞 Teléfono: 314 871 9333</p>
-  <p>🕒 Horario: Lunes a Sábado 7:30am - 5:00pm</p>
+  <p>📞 314 871 9333</p>
+  <p>✉️ elresorterosas@gmail.com</p>
 </section>
 
 <footer class="footer">
-  <p>© 2026 Muelles y Amortiguadores El Resortero</p>
+  © 2026 Muelles y Amortiguadores El Resortero
 </footer>
 
-<a href="https://wa.me/573148719333"
-   class="whatsapp-float"
-   target="_blank">💬</a>
+<a class="whatsapp-float"
+   href="https://wa.me/573148719333"
+   target="_blank">
+  <img src="img/whatsapp.png" alt="WhatsApp">
+</a>
+
 <script>
 function buscarProducto() {
-  const input = document.getElementById("buscador").value.toLowerCase();
-  const tarjetas = document.querySelectorAll(".card");
-  const mensaje = document.getElementById("sinResultados");
-
+  const texto = buscador.value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
   let encontrados = 0;
 
-<div class="categorias">
-  <button onclick="filtrarCategoria('todos')">Todos</button>
-  <button onclick="filtrarCategoria('amortiguadores')">Amortiguadores</button>
-  <button onclick="filtrarCategoria('resortes')">Resortes</button>
-  <button onclick="filtrarCategoria('bujes')">Bujes</button>
-  <button onclick="filtrarCategoria('grapas')">Grapas</button>
-</div>
-  tarjetas.forEach(card => {
-    const texto = card.innerText.toLowerCase();
-    if (texto.includes(input)) {
+  cards.forEach(card => {
+    if (card.innerText.toLowerCase().includes(texto)) {
       card.style.display = "block";
       encontrados++;
     } else {
@@ -159,20 +170,20 @@ function buscarProducto() {
     }
   });
 
-  mensaje.style.display = encontrados === 0 ? "block" : "none";
+  sinResultados.style.display = encontrados ? "none" : "block";
 }
-<script>
-function buscarProducto() {
-  const input = document.getElementById("buscador").value.toLowerCase();
-  const tarjetas = document.querySelectorAll(".card");
-  const mensaje = document.getElementById("sinResultados");
 
+function filtrar(cat, btn) {
+  document.querySelectorAll(".categorias button")
+    .forEach(b => b.classList.remove("activo"));
+
+  btn.classList.add("activo");
+
+  const cards = document.querySelectorAll(".card");
   let encontrados = 0;
 
-  tarjetas.forEach(card => {
-    const texto = card.textContent.toLowerCase();
-
-    if (texto.includes(input)) {
+  cards.forEach(card => {
+    if (cat === "" || card.dataset.cat === cat) {
       card.style.display = "block";
       encontrados++;
     } else {
@@ -180,10 +191,9 @@ function buscarProducto() {
     }
   });
 
-  if (mensaje) {
-    mensaje.style.display = encontrados === 0 ? "block" : "none";
-  }
+  sinResultados.style.display = encontrados ? "none" : "block";
 }
 </script>
+
 </body>
 </html>

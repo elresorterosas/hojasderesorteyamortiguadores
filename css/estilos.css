@@ -174,4 +174,31 @@ body {
 .product-card h3 {
   color: #000000;
 }
+/* IMAGEN DE PRODUCTO */
+.card-img {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
 
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Nombre protagonista */
+.card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  margin: 10px 0 6px;
+}
+
+/* Hover sutil, no invasivo */
+.card:hover .card-img img {
+  transform: scale(1.08);
+}

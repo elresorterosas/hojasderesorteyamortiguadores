@@ -167,8 +167,9 @@ body {
   box-shadow: 0 10px 25px rgba(37,211,102,.5);
 }
 
-.whatsapp-float img {
+..whatsapp-float svg {
   width: 32px;
+  height: 32px;
 }
 /* Títulos de productos en negro */
 .product-card h3 {
@@ -225,10 +226,10 @@ body {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);

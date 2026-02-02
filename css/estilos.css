@@ -391,3 +391,13 @@ body {
     font-size: 14px;
   }
 }
+@media (max-width: 480px) {
+  .nav-links a {
+    margin: 0 6px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+}

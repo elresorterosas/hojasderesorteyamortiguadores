@@ -368,7 +368,18 @@ body {
   padding: 36px 28px;
   border-radius: 18px;
 }
+/* ===== HEADER MOBILE FIX ===== */
 @media (max-width: 768px) {
+
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 
   .main-header {
     height: 70px;
@@ -378,15 +389,8 @@ body {
     padding: 0 16px;
   }
 
-  .logo {
-    font-size: 1.4rem;
-  }
-
-  .nav {
-    gap: 0;
-  }
-
-  .menu {
-    font-size: 1.6rem;
+  .logo img {
+    max-height: 42px;
+    width: auto;
   }
 }

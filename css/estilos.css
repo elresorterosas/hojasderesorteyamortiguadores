@@ -428,3 +428,27 @@ body {
     align-self: center;
   }
 }
+@media (max-width: 768px) {
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+
+    min-height: calc(100vh - 64px) !important; /* navbar móvil */
+    padding: 20px 16px 60px !important;
+  }
+
+  .header h1,
+  .header p,
+  .header .btn-whatsapp {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header .btn-whatsapp {
+    width: auto !important;
+    display: inline-block !important;
+    white-space: nowrap;
+  }
+}

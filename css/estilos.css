@@ -13,22 +13,24 @@ body {
 /* HEADER */
 .header {
   background:
-    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("../img/fondodos.png") center/cover;
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("../img/fondodos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 👈 baja TODO */
+  align-items: center;       /* mantiene botón igual */
+
+  padding: 40px 30px 80px;
+
   color: white;
   text-align: center;
-  padding: 120px 30px;
 }
-
-.header h1 {
-  font-size: 42px;
-}
-
-.header p {
-  margin: 10px 0 20px;
-  font-size: 18px;
-}
-
 .btn-whatsapp {
   background: #25D366;
   color: white;
@@ -36,6 +38,13 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+}
+.header .btn-whatsapp {
+  width: auto;          /* evita que se estire */
+  max-width: fit-content;
+  display: inline-block;
+  align-self: center;
+  white-space: nowrap;  /* mantiene el texto en una línea */
 }
 
 /* NAV */

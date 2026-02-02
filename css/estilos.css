@@ -368,29 +368,26 @@ body {
   padding: 36px 28px;
   border-radius: 18px;
 }
-/* ===== HEADER MOBILE FIX ===== */
+/* ===== NAVBAR MOBILE COMPACTO (SIN OCULTAR LINKS) ===== */
 @media (max-width: 768px) {
 
   .nav {
-    display: none;
+    height: 64px;
+    padding: 0 12px;
   }
 
-  .menu {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-
-  .main-header {
-    height: 70px;
-  }
-
-  .header-container {
-    padding: 0 16px;
+  /* Logo más pequeño */
+  .logo {
+    position: static;
   }
 
   .logo img {
-    max-height: 42px;
-    width: auto;
+    height: 38px;
+  }
+
+  /* Links más compactos */
+  .nav-links a {
+    margin: 0 10px;
+    font-size: 14px;
   }
 }

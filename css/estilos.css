@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,29 +9,37 @@
 body {
   background: #f4f7fb;
   color: #333;
+  padding-top: 90px; /* navbar desktop */
 }
 
-/* HEADER */
+/* ================= HEADER / HERO ================= */
 .header {
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("../img/fondodos.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    url("../img/fondodos.png") center / cover no-repeat;
 
   min-height: calc(100vh - 90px);
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* 👈 baja TODO */
-  align-items: center;       /* mantiene botón igual */
+  justify-content: flex-end; /* contenido abajo */
+  align-items: center;
 
   padding: 40px 30px 80px;
-
-  color: white;
   text-align: center;
+  color: white;
 }
+
+.header h1 {
+  font-size: 42px;
+}
+
+.header p {
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+/* BOTÓN WHATSAPP HERO */
 .btn-whatsapp {
   background: #25D366;
   color: white;
@@ -38,97 +47,36 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-}
-.header .btn-whatsapp {
-  width: auto;          /* evita que se estire */
-  max-width: fit-content;
   display: inline-block;
-  align-self: center;
-  white-space: nowrap;  /* mantiene el texto en una línea */
+  white-space: nowrap;
 }
 
-/* NAV */
-.nav {
-  width: 100%;
-  height: 90px;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-}
-
-.logo img {
-  height: 60px; /* ajusta según tu logo */
-  cursor: pointer;
-}
-
-.nav {
-  width: 100%;
-  height: 90px;
-  background-color: #0b3c8a; /* AZUL — cámbialo si tu logo tiene otro tono */
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-/* Logo a la izquierda */
-.logo {
-  position: absolute;
-  left: 30px;
-}
-
-.logo img {
-  height: 60px;
-  cursor: pointer;
-}
-
-/* Links centrados REALMENTE */
-.nav-links {
-  margin: 0 auto;
-}
-
-.nav {
-  width: 100%;
-  height: 90px;
-  background-color: #0A1A2F; /* AZUL MUY OSCURO */
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-/* Logo a la izquierda */
-.logo {
-  position: absolute;
-  left: 30px;
-}
-
-.logo img {
-  height: 60px;
-  cursor: pointer;
-}
-
-/* Links centrados */
-.nav-links {
-  margin: 0 auto;
-}
-
+/* ================= NAVBAR ================= */
 .nav {
   width: 100%;
   height: 90px;
   background-color: #0A1A2F;
   display: flex;
   align-items: center;
-  position: fixed;   /* 👈 siempre visible */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* para que el contenido no quede tapado */
-body {
-  padding-top: 90px;
+.logo {
+  position: absolute;
+  left: 30px;
+}
+
+.logo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+.nav-links {
+  margin: 0 auto;
 }
 
 .nav-links a {
@@ -141,11 +89,11 @@ body {
   transition: color 0.3s ease;
 }
 
-/* LINK ACTIVO */
 .nav-links a.active {
-  color: #25d366; /* verde */
+  color: #25d366;
 }
-/* SECCIONES */
+
+/* ================= SECCIONES ================= */
 .section {
   max-width: 1100px;
   margin: auto;
@@ -156,7 +104,7 @@ body {
   background: #eaf0ff;
 }
 
-/* BUSCADOR */
+/* ================= BUSCADOR ================= */
 .buscador {
   width: 100%;
   max-width: 420px;
@@ -167,7 +115,7 @@ body {
   border: 1px solid #ccc;
 }
 
-/* CATEGORÍAS */
+/* ================= CATEGORÍAS ================= */
 .categorias {
   display: flex;
   justify-content: center;
@@ -192,7 +140,7 @@ body {
   color: white;
 }
 
-/* PRODUCTOS */
+/* ================= PRODUCTOS ================= */
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -205,69 +153,13 @@ body {
   padding: 25px;
   text-align: center;
   box-shadow: 0 6px 15px rgba(0,0,0,.08);
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card h3 {
-  color: #000;
-  margin-bottom: 8px;
-}
-
-/* BOTÓN */
-.btn-small {
-  display: inline-block;
-  margin-top: 12px;
-  background: #0a3cff;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* MENSAJE */
-.sin-resultados {
-  text-align: center;
-  color: #666;
-  display: none;
-}
-
-/* FOOTER */
-.footer {
-  background: #0a1f44;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-/* WHATSAPP FLOTANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(37,211,102,.5);
-}
-
-..whatsapp-float svg {
-  width: 32px;
-  height: 32px;
-}
-/* Títulos de productos en negro */
-.product-card h3 {
-  color: #000000;
-}
-/* IMAGEN DE PRODUCTO */
 .card-img {
   width: 100%;
   height: 140px;
@@ -283,7 +175,10 @@ body {
   transition: transform 0.4s ease;
 }
 
-/* Nombre protagonista */
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
 .card h3 {
   font-size: 18px;
   font-weight: 800;
@@ -291,10 +186,27 @@ body {
   margin: 10px 0 6px;
 }
 
-/* Hover sutil, no invasivo */
-.card:hover .card-img img {
-  transform: scale(1.08);
+/* ================= BOTÓN PEQUEÑO ================= */
+.btn-small {
+  display: inline-block;
+  margin-top: 12px;
+  background: #0a3cff;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0a1f44;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ================= WHATSAPP FLOTANTE ================= */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -306,100 +218,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 rgba(37, 211, 102, 0.6);
   animation: pulse 2s infinite;
   z-index: 9999;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.15);
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-/* BANNERS */
-.banner-principal,
-.banner-secundario {
-  width: 100%;
-  max-width: 1200px;   /* controla el ancho sin exagerar */
-  margin: 60px auto;   /* separación entre banners */
-  padding: 0 20px;
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.8); }
+  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
 
-.banner-principal img,
-.banner-secundario img {
-  width: 100%;
-  height: auto;        /* CLAVE para que no se corten */
-  display: block;
-  border-radius: 18px; /* se ve más profesional */
-}.servicio-domicilio {
-  background: #eaf0ff;
-  padding: 18px 22px;
-  border-radius: 14px;
-  margin-top: 25px;
-  font-size: 15px;
-  line-height: 1.5;
-}
-.btn-whatsapp-mini {
-  display: block;
-  width: fit-content;
-  margin: 14px auto 0;
-  padding: 6px 16px;
-  background: #25d366;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 20px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-whatsapp-mini:hover {
-  background: #1ebe5d;
-  transform: scale(1.05);
-}
-/* Caja compacta para Contacto (domicilios y envíos) */
-.contacto-box {
-  background: #eaf0ff;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 36px 28px;
-  border-radius: 18px;
-}
-/* ===== NAVBAR MOBILE COMPACTO (SIN OCULTAR LINKS) ===== */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+  body {
+    padding-top: 64px; /* navbar móvil */
+  }
 
   .nav {
     height: 64px;
-    padding: 0 12px;
   }
 
-  /* Logo más pequeño */
   .logo {
     position: static;
+    margin-left: 12px;
   }
 
   .logo img {
     height: 38px;
   }
 
-  /* Links más compactos */
   .nav-links a {
     margin: 0 10px;
     font-size: 14px;
   }
+
+  .header {
+    min-height: calc(100vh - 64px);
+    padding: 20px 16px 60px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
 }
+
 @media (max-width: 480px) {
   .nav-links a {
     margin: 0 6px;
@@ -410,45 +273,31 @@ body {
     height: 34px;
   }
 }
-@media (max-width: 768px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* 👈 mismo comportamiento */
-    align-items: center;
+/* ===== BANNERS PERFECTAMENTE CENTRADOS ===== */
+.banner-principal,
+.banner-secundario {
+  width: 100%;
+  max-width: 1200px;
 
-    min-height: calc(100vh - 64px); /* altura real en móvil */
-    padding: 30px 20px 60px;
-  }
+  margin: 60px auto;   /* centra real */
+  padding: 0 20px;
 
-  .header .btn-whatsapp {
-    width: auto;
-    max-width: fit-content;
-    display: inline-block;
-    align-self: center;
-  }
+  display: flex;       /* CLAVE */
+  justify-content: center;
 }
-@media (max-width: 768px) {
-  .header {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
 
-    min-height: calc(100vh - 64px) !important; /* navbar móvil */
-    padding: 20px 16px 60px !important;
-  }
-
-  .header h1,
-  .header p,
-  .header .btn-whatsapp {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .header .btn-whatsapp {
-    width: auto !important;
-    display: inline-block !important;
-    white-space: nowrap;
-  }
+.banner-principal img,
+.banner-secundario img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+.servicio-domicilio {
+  background: #f3f3f3;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+  text-align: left;
 }

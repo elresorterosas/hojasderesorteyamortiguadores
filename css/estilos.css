@@ -368,3 +368,25 @@ body {
   padding: 36px 28px;
   border-radius: 18px;
 }
+@media (max-width: 768px) {
+
+  .main-header {
+    height: 70px;
+  }
+
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav {
+    gap: 0;
+  }
+
+  .menu {
+    font-size: 1.6rem;
+  }
+}

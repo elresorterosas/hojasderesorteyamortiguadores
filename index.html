@@ -2,12 +2,56 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>El Resortero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <!-- Logo -->
+  <a href="#nosotros" class="logo">
+    <img src="img/fondo.jpeg" alt="Logo El Resortero">
+  </a>
+
+  <!-- Links centrados -->
+  <div class="nav-links">
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+</body>
+</html><head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="BmW5iKWm5-qAf9cq6oaBDQlIAs2aiRyxEdpixvUkJ7c" />
   <title>Muelles y Amortiguadores El Resortero</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a");
 
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.clientHeight;
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 <body>
 
 <header class="header">
@@ -20,12 +64,6 @@
      Consultar por WhatsApp
   </a>
 </header>
-
-<nav class="nav">
-  <a href="#productos">Productos</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#contacto">Contacto</a>
-</nav>
 
 <section class="banner-principal">
   <img src="img/banner1.jpg" alt="Repuestos y Servicios">

@@ -301,3 +301,58 @@ body {
   margin: 30px auto;
   text-align: left;
 }
+/* ================= NAV LINK EFECTO ================= */
+.nav-links a {
+  position: relative;
+  padding-bottom: 6px;
+}
+/* ================= NAV LINK EFECTO ================= */
+.nav-links a {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #fff; /* LINEA BLANCA */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+/* BOTÓN VERDE CONSULTAR (DOMICILIOS) */
+.btn-whatsapp-mini {
+  display: inline-block;
+  margin-top: 12px;
+
+  background-color: #25D366;
+  color: #ffffff;
+
+  padding: 8px 20px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-mini:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-1px);
+}
+/* ===== AJUSTE IMAGEN HERO EN MÓVIL ===== */
+@media (max-width: 768px) {
+  .header {
+    background-position: center top; /* muestra parte superior */
+  }
+}
